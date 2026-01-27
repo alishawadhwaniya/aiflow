@@ -1,0 +1,51 @@
+.button-container {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  display: flex; /* Arrange buttons side-by-side */
+  gap: 12px;     /* Space between buttons */
+}
+
+/* Base style for both buttons */
+.run-button, .save-button {
+  border: none;
+  padding: 12px 32px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.1s, box-shadow 0.1s;
+  outline: 2px solid rgba(255,255,255,0.2);
+  outline-offset: -1px;
+}
+
+.run-button {
+  background: linear-gradient(90deg, #2563eb, #3b82f6); /* Blue */
+  color: white;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+}
+
+/* NEW Save Button Styles */
+.save-button {
+  background: linear-gradient(90deg, #10b981, #34d399); /* Emerald Green */
+  color: white;
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+}
+
+.run-button:hover, .save-button:hover {
+  transform: translateY(-2px);
+}
+
+.run-button:hover {
+  box-shadow: 0 6px 16px rgba(37, 99, 235, 0.4);
+}
+
+.save-button:hover {
+  box-shadow: 0 6px 16px rgba(16, 185, 129, 0.4);
+}
+
+.run-button:active, .save-button:active {
+  transform: translateY(0);
+}
