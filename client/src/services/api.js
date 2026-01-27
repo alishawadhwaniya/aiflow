@@ -1,4 +1,4 @@
-const API_URL = 'http://localhost:5000/api';
+const API_URL = 'https://ai-flow-bice.vercel.app/api';
 
 export const runFlow = async (inputText) => {
   try {
