@@ -16,7 +16,11 @@ connectDB();
 const app = express();
 
 // Middleware
-app.use(cors()); 
+app.use(cors({
+  origin: ['https://aiflow-theta.vercel.app', 'http://localhost:5173'], // Allow your Vercel frontend and local dev
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  credentials: true
+})); 
 app.use(express.json()); 
 
 // Routes
